@@ -1,0 +1,595 @@
+/*
+Theme Name: Tagged
+Theme URI: http://ankitpatil.com
+Description: Minimal WordPress Theme
+Version: 1.0
+Author: Ankit Patil (@anankitpatil)
+Author URI: http://www.ankitpatil.com
+Tags: HTML5, Portfolio, Responsive
+License: MIT
+License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+/* =============================================================================
+   General Styles
+   ========================================================================== */
+
+/* Global Box Sizing and Font-Smoothing */	 
+
+*, *:after, *:before {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+body {
+	font-family: Georgia, serif;
+	font-size: 11px;
+	font-weight: 300;
+	line-height: 18px;
+	color: #444;
+}
+a, li, figure, div, h1 {
+	transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+}
+a {
+	text-decoration: none;
+}
+.clear {
+	clear: both
+}
+#scroll-to-top {
+	border-radius: 50%;
+}
+#scroll-to-top:hover {
+	background-color: #CCC;
+}
+
+/* =============================================================================
+   Structure
+   ========================================================================== */
+
+header {
+	border-bottom: 1px solid #CCC;
+}
+header .wrapper {
+	text-align: center;
+}
+header .wrapper .old {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	z-index: 10;
+}
+header .wrapper .dld {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	z-index: 10;
+}
+header .wrapper .old a {
+	color: #333;
+}
+header .wrapper .old a:hover {
+	color: #666;
+}
+header .wrapper .animation {
+	height: 320px;
+	display: block;
+	overflow: hidden;
+}
+header .wrapper .animation a {
+	margin: 0;
+	color: #888;
+}
+header .wrapper .animation .fb-ani, header .wrapper .animation .ph-ani, header .wrapper .animation .ma-ani {
+	display: inline-block;
+}
+header .wrapper .animation .fb-ani {
+	background: url(img/fb_ani_icon.png) no-repeat left center;
+}
+header .wrapper .animation .ma-ani {
+	background: url(img/ma_ani_icon.png) no-repeat left center;
+}
+header .wrapper .animation .ph-ani {
+	background: url(img/ph_ani_icon.png) no-repeat left center;
+}
+header .wrapper .animation a:hover {
+	text-decoration: underline;
+	color: #0CF;
+}
+header .wrapper .play {
+	display: block;
+	width: 48px;
+	height: 48px;
+	background: url(img/play.png) no-repeat center center #FFF;
+	position: absolute;
+	top: 136px;
+	left: 50%;
+	margin-left: -24px;
+	opacity: 0.75;
+	z-index: 10;
+}
+header .wrapper .play:hover {
+	width: 320px;
+	margin-left: -160px;
+	opacity: 1;
+}
+header .wrapper .animation h1 {
+	font-weight: normal;
+	color: #CCC;
+	line-height: 320px;
+	margin: 0;
+}
+header .wrapper .animation h1 i {
+	color: #888;
+	opacity: 0;
+}
+header .wrapper .animation h2 {
+	font-size: 0.625em;
+	line-height: 160px;
+	margin: 0 auto !important;
+}
+header .wrapper .animation h2 i {
+	color: #888;
+	opacity: 0;
+}
+header .wrapper .animation .home_url {
+	display: block;
+	width: 100%;
+	height: 320px;
+	margin: 0 auto;
+}
+header .wrapper .resume_url {
+	display: block;
+	width: 48px;
+	height: 48px;
+	margin: 0 auto;
+	border-radius: 24px;
+	background: #444;
+	overflow: hidden;
+	margin-bottom: 2.625em;
+}
+header .wrapper .resume_url:hover {
+	width: 160px;
+	padding-left: 6px;
+}
+header .wrapper .resume_url img, header .wrapper .resume_url p {
+	float: left;
+	font-size: 2.0625em;
+	line-height: 0.25em;
+	color: #FFF;
+}
+header .wrapper h2 {
+	font-size: 1.0625em;
+}
+header .wrapper #tags {
+	text-align: center;
+	margin: 6.875em auto 4.25em;
+}
+header .wrapper #tags a {
+	border: 1px solid #888;
+	border-radius: 2px;
+	text-decoration: none;
+	padding: 5px 10px;
+	color: #888;
+	margin: 4px;
+	display: inline-block;
+}
+header .wrapper #tags .here {
+	background: url(img/tag_x.png) 4px 0 no-repeat #888;
+	color: #FFF;
+}
+header .wrapper #tags .here:hover {
+	background-color: transparent;
+	color: #888;
+	padding-left: 2.0625em;
+}
+header .wrapper #tags a:hover {
+	color: #FFF;
+	background-color: #888;
+}
+header .wrapper nav .single_nav, footer .wrapper nav .single_nav {
+	list-style: none;
+}
+header .wrapper nav .single_nav li, footer .wrapper nav .single_nav li {
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	margin-right: 1.0625em;
+}
+header .wrapper nav .single_nav li:last-child, footer .wrapper nav .single_nav li:last-child {
+	margin: 0;
+}
+header .wrapper nav .single_nav li a, footer .wrapper nav .single_nav li a {
+	width: 48px;
+	height: 48px;
+	display: block;
+	background: url(img/single_nav_x.png);
+	border-radius: 50%;
+}
+header .wrapper nav .single_nav li a:hover, footer .wrapper nav .single_nav li a:hover {
+	background-color: #CCC;
+}
+header .wrapper nav .single_nav .next a, footer .wrapper nav .single_nav .next a {
+	background: url(img/single_nav_next.png);
+}
+header .wrapper nav .single_nav .previous a, footer .wrapper nav .single_nav .previous a {
+	background: url(img/single_nav_previous.png);
+}
+header .wrapper .share {
+	padding: 7px 4px 4px;
+	margin: 0 auto 4.25em;
+}
+header .wrapper .share div {
+	display: inline-block;
+	vertical-align: baseline;
+}
+header .wrapper .share div:nth-child(1) {
+	margin-left: 26px;
+}
+header .wrapper .share div:nth-child(2) {
+	margin-left: 120px !important;
+}
+header .wrapper .share .fb-like {
+	padding-bottom: 2px;
+}
+footer {
+	border-top: 1px solid #CCC;
+}
+footer article section {
+	text-align: center;
+}
+footer article section:last-child {
+	padding-bottom: 1.625em;
+}
+footer article section blockquote {
+	font-size: 2.625em;
+	line-height: 1.625em;
+	margin: 1.625em auto;
+	width: 50%
+}
+footer article section .thank {
+	margin-bottom: 2.625em;
+}
+footer article section .thank img {
+	width: 48px;
+	margin: 0 auto;
+}
+footer article section a {
+	display: inline-block;
+	border-radius: 24px;
+	background: #888;
+	width: 48px;
+	height: 48px;
+	margin: 0 0.625em 2.625em;
+	overflow: hidden;
+}
+footer article section a:hover {
+	background: #444;
+	width: 26.5em;
+}
+footer article section a p, footer article section a img {
+	float: left;
+	font-size: 1.375em;
+	color: #FFF;
+}
+
+/* =============================================================================
+   Home Page
+   ========================================================================== */
+
+#main ul {
+	list-style: none;
+}
+#main ul li {
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+}
+#main ul li:hover {
+	background: #CCC;
+}
+#main ul li a .info {
+	position: absolute;
+	left: 0;
+	bottom: -50%;
+	width: 100%;
+	padding: 0.625em;
+	z-index: 1;
+	opacity: 0;
+}
+#main ul li a .info h3 {
+	font-size: 2em;
+	color: #CCC;
+	font-weight: normal;
+	padding: 0.375em;
+	line-height: 1.25em;
+	margin: 0;
+	background: url(img/black_75.png);
+}
+#main ul li a .info p {
+	font-size: 1.0625em;
+	color: #888;
+	line-height: 1.625em;
+	padding: 0 0.625em 1em;
+	margin: 0;
+	background: url(img/black_75.png);
+}
+#main ul li a .info p i {
+	border: 1px solid #888;
+	padding: 0 2px;
+	margin: 0 2px 2px 0;
+	border-radius: 2px;
+	display: inline-block;
+}
+#main ul li:hover .info {
+	bottom: 0;
+	opacity: 1;
+}
+
+/* =============================================================================
+   Single Post Page
+   ========================================================================== */
+
+#single .thumbnail {
+	padding: 2.625em;
+	display: inline-block;
+}
+#single .wrapper a {
+	color: #4B5C78;
+	text-decoration: none;
+}
+#single .wrapper a:hover {
+	color: #888;
+	text-decoration: underline;
+}
+#single .aside {
+	display: inline-block;
+	padding: 2.625em;
+	vertical-align: top;
+}
+#single .aside h1 {
+	font-weight: normal;
+	margin: 0;
+}
+#single .aside h1 a {
+	text-decoration: none;
+	color: #444;
+}
+#single .aside p {
+	font-size: 1.625em;
+	line-height: 1.25em;
+}
+#single .aside tags a {
+	padding: 4px;
+	border: 1px solid #CCC;
+	text-decoration: none;
+	font-size: 1.25em;
+	margin-right: 4px;
+	margin-bottom: 4px;
+	border-radius: 2px;
+	color: #CCC;
+	display: inline-block;
+}
+#single .aside tags a:hover {
+	border: 1px solid #888;
+	color: #888;
+}
+#single .aside date {
+	color: #CCC;
+	padding: 1em 0;
+	display: block;
+}
+#single .content {
+	padding: 2.625em 0;
+	border-top: 1px solid #EEE;
+}
+#single .content a:hover {
+	color: #09F;
+}
+#single .content .noresize img {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+}
+#single .content .half {
+	display: inline-block;
+	width: 50%;
+	float: left;
+}
+#single .content .three {
+	display: inline-block;
+	width: 33.333333333333333%;
+	float: left;
+}
+#single .content .half img, #single .content .three img {
+	max-width: 100%;
+	height: auto;
+}
+#single .content article .wrapper {
+	padding: 0 5.555555555555555% 2.625em;
+	font-size: 1.625em;
+	line-height: 1.625em;
+	text-align: center;
+}
+#single .content .video {
+	position: relative;
+	padding-bottom: 55%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+	margin-bottom: 2.625em;
+}
+#single .content .video iframe, #single .content .video object, #single .content .video embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* =============================================================================
+   Non-Semantic Classes
+   ========================================================================== */
+ 
+/* Custom Selection Styles */
+
+::selection {
+	background: #D31245;
+	color: #FFF;
+	text-shadow: none;
+}
+
+::-webkit-selection {
+ background:#D31245;
+ color:#FFF;
+ text-shadow:none;
+}
+
+::-moz-selection {
+ background:#D31245;
+ color:#FFF;
+ text-shadow:none;
+}
+
+/* Input focus styles */
+
+input:focus {
+	outline: 0;
+	border: 1px solid #0091BD;
+} /* Gets rid of blue glow on field focus, adds border color instead */
+
+/* =============================================================================
+   WordPress Core CSS Styles
+   ========================================================================== */
+
+.alignnone {
+	margin: 5px 20px 20px 0;
+}
+.aligncenter, div.aligncenter {
+	display: block;
+	margin: 5px auto 5px auto;
+}
+.alignright {
+	float: right;
+	margin: 5px 0 20px 20px;
+}
+.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0;
+}
+.aligncenter {
+	display: block;
+	margin: 5px auto 5px auto;
+}
+a img.alignright {
+	float: right;
+	margin: 5px 0 20px 20px;
+}
+a img.alignnone {
+	margin: 5px 20px 20px 0;
+}
+a img.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0;
+}
+a img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.wp-caption {
+	background: #FFF;
+	border: 1px solid #F0F0F0;
+	max-width: 96%;
+	padding: 5px 3px 10px;
+	text-align: center;
+}
+.wp-caption.alignnone {
+	margin: 5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+	margin: 5px 20px 20px 0;
+}
+.wp-caption.alignright {
+	margin: 5px 0 20px 20px;
+}
+.wp-caption img {
+	border: 0 none;
+	height: auto;
+	margin: 0;
+	max-width: 98.5%;
+	padding: 0;
+	width: auto;
+}
+.wp-caption p.wp-caption-text, .gallery-caption {
+	font-size: 11px;
+	line-height: 17px;
+	margin: 0;
+	padding: 0 4px 5px;
+}
+.sticky {
+}
+.bypostauthor {
+}
+
+/* ==========================================================================
+   Responsive styles
+   ========================================================================== */
+   
+
+ 
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+* {
+	background: transparent !important;
+	color: #000 !important;
+	box-shadow: none !important;
+	text-shadow: none !important;
+}
+a, a:visited {
+	text-decoration: underline;
+}
+a[href]:after {
+	content: " (" attr(href) ")";
+}
+abbr[title]:after {
+	content: " (" attr(title) ")";
+}
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+	content: "";
+}
+pre, blockquote {
+	border: 1px solid #999;
+	page-break-inside: avoid;
+}
+thead {
+	display: table-header-group;
+}
+tr, img {
+	page-break-inside: avoid;
+}
+img {
+	max-width: 100% !important;
+}
+ @page {
+ margin:0.5cm;
+}
+p, h2, h3 {
+	orphans: 3;
+	widows: 3;
+}
+h2, h3 {
+	page-break-after: avoid;
+}
+}

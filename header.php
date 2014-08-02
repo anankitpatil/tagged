@@ -1,0 +1,183 @@
+<!doctype html>
+
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+
+<!--[if gte IE 9]><!--><html><!--<![endif]-->
+
+
+
+<html <?php language_attributes(); ?> class="no-js" xmlns:fb="http://ogp.me/ns/fb#">
+
+
+
+<head>
+
+	<meta charset="<?php bloginfo('charset'); ?>">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    
+
+	<title><?php wp_title(''); ?></title>
+
+	
+
+	<!-- Meta -->
+
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+
+    
+
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/GGS.css" />
+
+    
+
+    <?php require 'simple_html_dom.php'; ?>
+
+		
+
+	<?php wp_head(); ?>
+
+    
+
+    <!--[if lt IE 9]>
+
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+
+    <![endif]-->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    	
+
+</head>
+
+
+
+<body <?php body_class(); ?>>
+
+	<div id="fb-root"></div>
+
+    <!-- Header -->
+
+	<header>
+
+        <div class="wrapper">
+        
+        	<section class="old">
+            
+            	<a href="/old" target="_blank">Older version -&gt;</a>
+                
+            </section>
+
+			<div class="play"></div>
+
+            <section class="animation">
+
+                <a href="<?php echo home_url(); ?>" class="home_url">
+
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png"/>
+
+                </a>
+
+            </section>
+
+            <a href="<?php echo get_permalink( 2 ); ?>" class="resume_url">
+
+                <img src="<?php echo get_template_directory_uri(); ?>/img/resume_icon.png"/>
+
+                <p>Resume</p>
+
+            </a>
+
+            <!-- <h2><?php //bloginfo('name'); ?> | <desc><?php //bloginfo('description'); ?></desc></h2> -->
+
+            <!--<h2>
+
+                I am <b>Ankit Patil.</b> I am a <b>User Experience Designer.</b> For this I <b>Code, Illustrate, Animate and Shoot.</b> I use <b>Adobe and a Canon D600.</b> I present <b>Clarity, Necessity and Truth.</b> I am on <b><a href="http:\\www.facebook.com\ankitpatil69" class="fb">Facebook</a></b> I am reachable on <b>+44 7424965733</b>
+
+            </h2>-->
+
+        
+
+            <section id="tags">
+
+                    
+
+            	<?php ?>
+
+				<?php if ( is_home() || is_page() ) { wp_tag_cloud( array('smallest'=> 1.625, 'largest'=> 1.625, 'unit'=>'em', 'separator'=> '') ); } ?>
+
+                <?php if ( is_tag() ) { ?>
+
+				<?php if ( $all_the_tags ); $all_the_tags = get_the_tags(); ?>
+
+				<?php foreach($all_the_tags as $this_tag) { ?>
+
+				<?php if ( $this_tag->name == single_tag_title( '', false ) ) $tag = $this_tag->term_id; } ?>
+
+				<?php wp_tag_cloud( array('smallest'=> 1.625, 'largest'=> 1.625, 'unit'=> 'em', 'separator'=> '', 'exclude'=> $tag) ); ?>
+
+                <?php echo '<a href="'.home_url().'" style="font-size:1.625em" class="here">'.single_tag_title( '', false ).'</a>'; } ?>
+
+                
+
+            </section>
+            
+            <!-- Like Page -->
+            
+            <section class="share">
+            	
+                <div class="fb-like" data-href="http://www.facebook.com/anankitpatil" data-send="false" data-layout="button_count" data-width="180" data-show-faces="false"></div>
+                
+            </section>
+
+            
+
+            <!-- Nav -->
+
+			<?php
+
+                if ( is_single() ) {
+
+                    echo '<nav>';
+
+                    echo '<ul class="single_nav"><li class="previous">';
+
+                    previous_post_link('%link', '');
+
+                    echo '</li><li class="home">';
+
+                    $home_url = home_url('/');
+
+                    echo '<a href="'.$home_url.'"></a>';
+
+                    echo '</li><li class="next">';
+
+                    next_post_link('%link', '');
+
+                    echo '</li></ul>';	
+
+                    echo '</nav>';				
+
+                }
+
+            ?>
+
+            <!-- /Nav -->
+
+        
+
+        </div>            
+
+	
+
+	</header>
+
+	<!-- /Header -->
+
+	
+
+<!-- Wrapper -->
+
+<div class="wrapper">
