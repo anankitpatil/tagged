@@ -1,19 +1,19 @@
-# [HTML5 Blank](http://html5blank.com)
+# [Tagged](http://ankitpatil.com)
 
-HTML5 Blank is a powerful shell for rapidly deploying your WordPress projects. Get developing in minutes, with the robust, preloaded shell. HTML5 Blank.
+Tagged is a light Wordpress theme built on the HTML5 Blank shell
 
-* Project: [github.com/toddmotto/html5blank](https://github.com/toddmotto/html5blank)
-* Web: [html5blank.com](http://html5blank.com)
-* Twitter: [@toddmotto](http://twitter.com/toddmotto), [@html5blank](http://twitter.com/html5blank)
+* Project: [github.com/anankitpatil/tagged](https://github.com/anankitpatil/tagged)
+* Web: [ankitpatil.com](http://ankitpatil.com)
+* Twitter: [@anankitpatil](http://twitter.com/anankitpatil)
 
 
-## Getting Started with HTML5 Blank
+## Built on html5blank shell
 
 Download the latest version from [html5blank.com](http://html5blank.com)
 
-## Get involved! Make HTML5 Blank better
+## Available open source
 
-There are a few ways to get involved, submit a Pull Request, or submit a comment on the website - [html5blank.com](http://html5blank.com)
+The theme is currently live on the website - [ankitpatil.com](http://ankitpatil.com). Feel free to use it and modify it in any way possible.
 
 ## Features
 
