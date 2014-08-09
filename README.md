@@ -23,7 +23,7 @@ The theme is currently live on the website - [ankitpatil.com](http://ankitpatil.
 * Responsive Ready, ViewPort meta data
 * HTML Class support for IE7, IE8, IE9 Conditionals (HTML5 Boilerplate)
 * Clean, neatly organised code, with PHP annotations
-* 
+
 ### Minimal HTML5 Post type with specific styles
 * [<figure class="noresize"></figure>]() for fixed width images
 * [<figure></figure>]() for full width images
